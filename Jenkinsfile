@@ -1,9 +1,9 @@
 pipeline{
   agent any
   stages{
-    stage('cloning the repository'){
+    stage('echo hello world'){
       steps{
-        
+        echo 'hello world'
       }
     }
   }
