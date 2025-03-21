@@ -1,16 +1,16 @@
-pipeline{
+pipeline {
   agent any
 
-  environment{
+  environment {
     Dockerimage = "my-docker:20"
   }
-  stages{
-    stage('build docker image with Dockerfile'){
-      steps{
-        
+  stages {
+    stage('Build Docker Image with Dockerfile') {
+      steps {
+        // Build the Docker image using the environment variable
         bat "docker build -t %Dockerimage% ."
-        bat "The image is build"
-        
+        // Print a confirmation message
+        bat "echo The image is built"
       }
     }
   }
